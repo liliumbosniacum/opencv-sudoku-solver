@@ -27,7 +27,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-public class MinstClassifier {
+public class MnistClassifier {
     private static final String RESOURCES_FOLDER_PATH = "D:\\Development\\IntelliJ\\opencv-sudoku-solver\\src\\main\\resources\\mnist";
     private static final int HEIGHT = 60;
     private static final int WIDTH = 60;

@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Utils {
+    private static final String ABSOLUTE_PATH = "D:\\Development\\IntelliJ\\opencv-sudoku-solver";
+
     private Utils() {}
 
     // region Implementation
@@ -220,7 +222,7 @@ public final class Utils {
      * @param path Path on which image is saved.
      */
     public static void saveImage(final Mat imageToSave, final String path) {
-        Imgcodecs.imwrite("D:\\Development\\IntelliJ\\opencv-sudoku-solver\\src\\main\\resources\\" + path, imageToSave);
+        Imgcodecs.imwrite(ABSOLUTE_PATH + "\\src\\main\\resources\\" + path, imageToSave);
     }
 
     /**
@@ -230,7 +232,7 @@ public final class Utils {
      * @return Loads image from provided path.
      */
     public static Mat loadImage(final String imagePath) {
-        return Imgcodecs.imread("D:\\Development\\IntelliJ\\opencv-sudoku-solver\\src\\main\\resources\\" + imagePath);
+        return Imgcodecs.imread(ABSOLUTE_PATH + "\\src\\main\\resources\\" + imagePath);
     }
 
     /**
