@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+def dl4jVersion = '1.0.0-beta7'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.openpnp/opencv
+    implementation group: 'org.openpnp', name: 'opencv', version: '4.5.1-2'
+
+    // DL4J
+    implementation group: 'org.nd4j', name: 'nd4j-native-platform', version: dl4jVersion
+    implementation group: 'org.deeplearning4j', name: 'deeplearning4j-core', version: dl4jVersion
+    implementation group: 'org.apache.cassandra', name: 'cassandra-all', version: '3.11.10'
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
